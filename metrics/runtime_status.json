@@ -1,9 +1,9 @@
 {
   "version": "1.0",
-  "timestamp": "2025-10-27T22:01:40Z",
-  "cpu_pct": 0.94,
-  "mem_pct": 3.17,
-  "load1": 0.75,
-  "uptime_sec": 520970,
+  "timestamp": "2025-10-27T22:11:53Z",
+  "cpu_pct": 0.68,
+  "mem_pct": 3.18,
+  "load1": 0.16,
+  "uptime_sec": 521582,
   "status": "ok"
 }
