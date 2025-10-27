@@ -1,0 +1,13 @@
+#api-integrity-card{
+  position:fixed;top:18px;right:20px;z-index:1000;
+  background:#0b0d12cc;color:#fff;padding:12px 20px;
+  border-radius:10px;font-family:Inter,Arial,sans-serif;
+  box-shadow:0 0 12px rgba(0,0,0,0.4);min-width:210px;
+  backdrop-filter:blur(8px);
+  transition:background 0.3s ease;
+}
+#api-integrity-card h4{margin:0 0 4px 0;font-size:15px;font-weight:600;}
+#api-integrity-card .status{font-size:13px;}
+#api-integrity-card .ok{color:#00e676;}
+#api-integrity-card .warn{color:#ffeb3b;}
+#api-integrity-card .fail{color:#ff1744;}

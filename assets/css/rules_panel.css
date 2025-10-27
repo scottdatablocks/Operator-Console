@@ -1,0 +1,15 @@
+:root{
+  --bg:#0b0d12; --ink:#dbe7ff; --muted:#9fb3d1; --accent:#4da3ff;
+  --card:#0f1320cc; --border:#1c2336; --green:#2bd887; --yellow:#ffd166;
+}
+.rules-wrap{padding:24px 20px 64px; max-width:1200px; margin:0 auto;}
+.rules-head{display:flex; align-items:center; gap:12px; margin-bottom:16px;}
+.rules-head h1{font-size:22px; color:var(--ink); margin:0;}
+.rules-head .meta{color:var(--muted); font-size:12px;}
+.rules-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px;}
+.rule-card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px; backdrop-filter: blur(8px);}
+.rule-title{font-weight:600; font-size:15px; color:var(--ink); margin:0 0 6px;}
+.rule-meta{font-size:12px; color:var(--muted); margin-bottom:8px;}
+.rule-body{font-size:13px; color:var(--ink); line-height:1.35;}
+.rule-badge{display:inline-flex; align-items:center; gap:6px; font-size:11px; color:var(--ink); background:#0b3a1bcc; border:1px solid #105a2a; border-radius:999px; padding:4px 10px; margin-top:8px;}
+.rules-empty{color:var(--muted); font-size:14px; text-align:center; padding:40px 12px; border:1px dashed var(--border); border-radius:10px;}

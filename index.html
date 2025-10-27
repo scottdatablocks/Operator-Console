@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Harmonix Operator Console — Mission Control v5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Base skin if present -->
+  <link rel="stylesheet" href="assets/css/skin.css">
+  <style>
+    :root{
+      --bg:#0b0d12;--panel:#12151d;--glass:rgba(255,255,255,0.06);
+      --text:#e6edf3;--muted:#9aa4af;--accent:#4dd6ff;--ok:#29cc7a;--warn:#ffc857;--err:#ff6b6b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:radial-gradient(1200px 800px at 20% -10%, #12223a 0%, #0b0d12 35%, #0b0d12 100%);
+      color:var(--text);font:14px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+    }
+    .wrap{max-width:1200px;margin:0 auto;padding:16px}
+    header.top{
+      position:sticky;top:0;z-index:10;background:linear-gradient(180deg, rgba(11,13,18,.85), rgba(11,13,18,.55));
+      backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#19b5ff,#4dd6ff);box-shadow:0 0 24px rgba(77,214,255,.35)}
+    .brand h1{font-size:16px;margin:0}
+    .muted{color:var(--muted);font-size:12px}
+    nav.nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    nav.nav a{
+      text-decoration:none;color:var(--text);padding:8px 12px;border:1px solid rgba(255,255,255,.08);
+      border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      transition:transform .16s ease, background .16s ease, border-color .16s ease;
+    }
+    nav.nav a.active, nav.nav a:hover{border-color:rgba(77,214,255,.55); background:rgba(77,214,255,.06)}
+    .badges{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .row{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;
+      box-shadow:0 4px 28px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+    }
+    main .grid#view{min-height:55vh}
+    footer.foot{opacity:.75;border-top:1px solid rgba(255,255,255,.06)}
+    .pill{padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:12px}
+    .ok{color:#0dd67b;border-color:rgba(13,214,123,.45);background:rgba(13,214,123,.08)}
+    .warn{color:#ffc857;border-color:rgba(255,200,87,.45);background:rgba(255,200,87,.08)}
+    .err{color:#ff6b6b;border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.08)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+    /* route fade */
+    .fade-enter{opacity:0; transform:translateY(6px)}
+    .fade-enter-active{opacity:1; transform:translateY(0); transition:all .18s ease}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap row">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Harmonix Operator Console</h1>
+          <div class="muted">Mission Control v5 · Data Blocks LLC</div>
+        </div>
+      </div>
+      <div class="badges">
+        <!-- live badges populate into this span cluster -->
+        <span id="badge-why" class="pill mono">WHY: …</span>
+        <span id="badge-preflight" class="pill mono">Preflight: …</span>
+        <span id="badge-runtime" class="pill mono">CPU/MEM/Load: …</span>
+        <span id="badge-api" class="pill mono">API: …</span>
+      </div>
+    </div>
+    <div class="wrap">
+      <nav class="nav" id="nav">
+        <a href="#/dashboard" data-route="dashboard">Dashboard</a>
+        <a href="#/theatre" data-route="theatre">Theatre</a>
+        <a href="#/pods" data-route="pods">Pods</a>
+        <a href="#/preflight" data-route="preflight">Preflight</a>
+        <a href="#/security" data-route="security">Security</a>
+        <a href="#/rules" data-route="rules">Rules</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="view" class="grid fade-enter">
+      <!-- modules render into here -->
+      <div class="card" style="grid-column: span 12;">
+        Loading…
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot wrap mono">
+    Harmonix™ · UTC <span id="utc"></span>
+  </footer>
+
+  <!-- Endpoint shim FIRST (fallback to /data/*_latest.json when live fails) -->
+  <script src="assets/js/modules/endpoint_shim.js"></script>
+
+  <!-- App shell -->
+  <script src="assets/js/app.js"></script>
+
+  <!-- Live status badges -->
+  <script src="assets/js/modules/hmx_console_why_badge.js"></script>
+  <script src="assets/js/modules/hmx_console_preflight_badge.js"></script>
+  <script src="assets/js/modules/hmx_console_runtime_badge.js"></script>
+  <script src="assets/js/modules/api_integrity_card.js"></script>
+
+  <!-- Feature modules (routes) -->
+  <script src="assets/js/modules/dashboard.js"></script>
+  <script src="assets/js/modules/theatre.js"></script>
+  <script src="assets/js/modules/pods.js"></script>
+  <script src="assets/js/modules/preflight.js"></script>
+  <script src="assets/js/modules/security.js"></script>
+  <script src="assets/js/modules/rules_panel.js"></script>
+</body>
+</html>
