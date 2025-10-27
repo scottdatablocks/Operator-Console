@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "version": "v8.0.0",
+  "timestamp": "2025-10-27T19:09:30Z",
+  "system": {
+    "cpu_load": 0.32,
+    "memory_gb_used": 45.6,
+    "disk_gb_used": 210.4,
+    "network_tx_mbps": 18.5,
+    "network_rx_mbps": 22.1
+  },
+  "alerts": [],
+  "logs": [
+    "2025-10-27T18:45:00Z — Node001: provider heartbeat OK",
+    "2025-10-27T18:46:15Z — Prometheus scrape success (15 targets)"
+  ]
+}

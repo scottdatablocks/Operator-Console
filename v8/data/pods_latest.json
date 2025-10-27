@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "version": "v8.0.0",
+  "timestamp": "2025-10-27T19:09:30Z",
+  "pods": [
+    {
+      "name": "provider-akash-001",
+      "namespace": "akash-services",
+      "status": "Running",
+      "restarts": 0,
+      "uptime": "128h"
+    },
+    {
+      "name": "prometheus-collector",
+      "namespace": "monitoring",
+      "status": "Running",
+      "restarts": 1,
+      "uptime": "340h"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "version": "v8.0.0",
+  "uptime": "142h",
+  "timestamp": "2025-10-27T19:09:30Z",
+  "services": {
+    "pods": "ready",
+    "theatre": "ready",
+    "dashboard": "ready",
+    "preflight": "ready",
+    "runtime": "ready"
+  },
+  "meta": {
+    "region": "us-east",
+    "node": "AkashDBX.Orlando.Node001",
+    "organization": "Data Blocks LLC"
+  }
+}

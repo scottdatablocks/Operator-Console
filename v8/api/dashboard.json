@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "version": "v8.0.0",
+  "timestamp": "2025-10-27T19:09:30Z",
+  "summary": {
+    "nodes_online": 1,
+    "active_leases": 0,
+    "total_earnings_akt": 0,
+    "last_sync": "2025-10-27T19:09:30Z"
+  },
+  "metrics": {
+    "cpu_usage": "6%",
+    "memory_usage": "18%",
+    "disk_usage": "22%"
+  }
+}
