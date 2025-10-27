@@ -1,23 +1,31 @@
-(function(){
-  const routes = {
-    "#/dashboard": window.renderDashboardV8,
-    "#/pods": window.renderPodsV8,
-    "#/theatre": window.renderTheatreV8,
-  };
-  function setActive(route){
-    document.querySelectorAll('.nav .btn').forEach(b=>{
-      b.classList.toggle('active', b.dataset.route===route);
-    });
+// Harmonix Operator Console — v8 initialization shim
+console.log("Harmonix v8 app_v8.js loaded");
+
+async function hmxBoot() {
+  console.log("Harmonix v8 boot sequence starting...");
+
+  try {
+    // Load dashboard metrics
+    if (typeof updateDashboard === "function") {
+      await updateDashboard();
+      console.log("Dashboard metrics updated.");
+    }
+
+    // Load pods view if defined
+    if (typeof renderPods === "function") {
+      await renderPods();
+      console.log("Pods grid rendered.");
+    }
+
+    // Load theatre if available
+    if (typeof renderTheatre === "function") {
+      await renderTheatre();
+      console.log("Theatre animation loaded.");
+    }
+  } catch (err) {
+    console.error("Harmonix boot error:", err);
   }
-  async function navigate(){
-    const h = location.hash || "#/dashboard";
-    setActive(h);
-    const fn = routes[h] || routes["#/dashboard"];
-    const view = document.getElementById('view');
-    view.innerHTML = "";
-    await fn(view);
-  }
-  window.addEventListener('hashchange', navigate);
-  setInterval(()=>{document.getElementById('utc').textContent=new Date().toISOString().replace(/\..+/, 'Z')},1000);
-  navigate();
-})();
+}
+
+// Run boot once DOM is ready
+document.addEventListener("DOMContentLoaded", hmxBoot);
