@@ -41,3 +41,22 @@ a{color:var(--accent);text-decoration:none}
 .center-text{display:flex;align-items:center;justify-content:center;min-height:160px;color:var(--muted)}
 .fade{animation:fade .35s ease}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.btn{
+  display:inline-block; padding:8px 12px; margin-left:8px;
+  border:1px solid rgba(255,255,255,0.15); border-radius:6px;
+  background:rgba(255,255,255,0.04); color:#e6edf3; text-decoration:none;
+  transition:transform .12s ease, background .12s ease;
+}
+.btn:hover{ transform:translateY(-1px); background:rgba(255,255,255,0.08); }
+.btn-doc {
+  display:inline-block;
+  margin-left:10px;
+  padding:6px 12px;
+  background:linear-gradient(135deg,#1d6ee8 0%,#33b3ff 100%);
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:6px;
+  transition:all 0.2s ease-in-out;
+}
+.btn-doc:hover { transform:translateY(-1px); opacity:0.9; }
