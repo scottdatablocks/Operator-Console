@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Harmonix Operator Console — Mission Control v8</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/skin.css">
+</head>
+<body>
+  <header class="header wrap">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>Harmonix Operator Console — Mission Control v8</h1>
+    </div>
+    <nav class="nav">
+      <a class="btn" data-route="#/dashboard">Dashboard</a>
+      <a class="btn" data-route="#/pods">Pods</a>
+      <a class="btn" data-route="#/theatre">Theatre</a>
+      <a class="btn" href="/docs/HMX_MissionControl_DesignDoc_v1.2.pdf" target="_blank" rel="noopener">Design Doc</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="grid" id="view"></div>
+  </main>
+
+  <footer class="footer">
+    Data Blocks LLC · Harmonix™ · UTC <span id="utc"></span>
+  </footer>
+
+  <!-- App core + views -->
+  <script src="assets/js/modules/endpoint_shim_v8.js"></script>
+  <script src="assets/js/app_v8.js"></script>
+  <script src="assets/js/modules/dashboard_v8.js"></script>
+  <script src="assets/js/modules/pods_v8.js"></script>
+  <script src="assets/js/modules/theatre_v8.js"></script>
+</body>
+</html>
