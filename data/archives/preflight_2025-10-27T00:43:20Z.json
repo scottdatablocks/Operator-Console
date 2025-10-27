@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-01-01T00:00:00Z",
+  "chart": "akash-network/provider",
+  "chart_version": "12.1.4",
+  "tiers": {
+    "boot_guard": "ok",
+    "toolchain": "ok",
+    "render": "ok",
+    "client_dry_run": "ok",
+    "sanitizer": "ok",
+    "server_dry_run": "ok",
+    "network": "warn"
+  },
+  "result": "WARN"
+}

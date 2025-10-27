@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "generated_at": "2025-10-27T12:34:54Z",
+  "files": {
+    "runtime": "runtime_latest.json",
+    "security": "security_latest.json",
+    "preflight": "preflight_latest.json"
+  }
+}
