@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-10-27T19:30:52Z",
+  "timestamp": "2025-10-27T19:45:52Z",
   "results": {
-    "metrics": "fail_http_404000",
-    "security": "fail_http_404000",
-    "preflight": "fail_http_404000"
+    "metrics": "fail_json",
+    "security": "fail_json",
+    "preflight": "fail_json"
   }
 }
