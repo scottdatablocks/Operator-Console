@@ -1,0 +1,20 @@
+# Build
+dist/
+node_modules/
+.cache/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
+
+# Misc
+.vercel/
