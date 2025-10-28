@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-10-28T17:40:00Z",
+  "items": [
+    {
+      "metadata": {
+        "name": "akash-provider-0",
+        "namespace": "akash-services",
+        "creationTimestamp": "2025-10-15T08:30:00Z"
+      },
+      "status": {
+        "phase": "Running",
+        "containerStatuses": [
+          {
+            "name": "provider",
+            "ready": true,
+            "restartCount": 0,
+            "state": {
+              "running": {
+                "startedAt": "2025-10-15T08:30:45Z"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "akash-operator-inventory-0",
+        "namespace": "akash-services",
+        "creationTimestamp": "2025-10-15T08:30:00Z"
+      },
+      "status": {
+        "phase": "Running",
+        "containerStatuses": [
+          {
+            "name": "inventory",
+            "ready": true,
+            "restartCount": 2,
+            "state": {
+              "running": {
+                "startedAt": "2025-10-20T14:22:00Z"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "akash-hostname-operator-0",
+        "namespace": "akash-services",
+        "creationTimestamp": "2025-10-15T08:30:00Z"
+      },
+      "status": {
+        "phase": "Running",
+        "containerStatuses": [
+          {
+            "name": "hostname-operator",
+            "ready": true,
+            "restartCount": 0,
+            "state": {
+              "running": {
+                "startedAt": "2025-10-15T08:30:50Z"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "name": "akash-ip-operator-0",
+        "namespace": "akash-services",
+        "creationTimestamp": "2025-10-15T08:30:00Z"
+      },
+      "status": {
+        "phase": "Running",
+        "containerStatuses": [
+          {
+            "name": "ip-operator",
+            "ready": true,
+            "restartCount": 1,
+            "state": {
+              "running": {
+                "startedAt": "2025-10-18T11:15:00Z"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

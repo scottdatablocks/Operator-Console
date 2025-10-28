@@ -16,6 +16,7 @@ const FALLBACK_ENDPOINTS = {
   "/metrics/runtime_status.json": "/data/runtime_latest.json",
   "/security/boot_guard_report.json": "/data/security_latest.json",
   "/preflight/reports/latest.json": "/data/preflight_latest.json",
+  "/metrics/pods_provider.json": "/data/pods_latest.json",
 };
 
 /**

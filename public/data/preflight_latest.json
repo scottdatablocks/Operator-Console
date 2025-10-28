@@ -1,0 +1,87 @@
+{
+  "header": {
+    "report_version": "3.1.0",
+    "generated": "2025-10-28T17:35:00Z",
+    "duration_sec": 127.4,
+    "overall_status": "PASS"
+  },
+  "context": {
+    "chart": "akash-network/provider",
+    "chart_version": "12.1.4",
+    "namespace": "akash-services",
+    "mode": "production"
+  },
+  "summary": {
+    "trust_score": 98.5,
+    "total_checks": 42,
+    "passed": 41,
+    "warnings": 1,
+    "failures": 0
+  },
+  "results": {
+    "tiers": [
+      {
+        "tier": "boot_guard",
+        "status": "PASS",
+        "checks_run": 8,
+        "passed": 8,
+        "duration_sec": 12.3,
+        "issues": []
+      },
+      {
+        "tier": "toolchain",
+        "status": "PASS",
+        "checks_run": 6,
+        "passed": 6,
+        "duration_sec": 18.7,
+        "issues": []
+      },
+      {
+        "tier": "render",
+        "status": "PASS",
+        "checks_run": 5,
+        "passed": 5,
+        "duration_sec": 22.1,
+        "issues": []
+      },
+      {
+        "tier": "client_dry_run",
+        "status": "PASS",
+        "checks_run": 7,
+        "passed": 7,
+        "duration_sec": 31.5,
+        "issues": []
+      },
+      {
+        "tier": "sanitizer",
+        "status": "PASS",
+        "checks_run": 9,
+        "passed": 9,
+        "duration_sec": 15.8,
+        "issues": []
+      },
+      {
+        "tier": "server_dry_run",
+        "status": "PASS",
+        "checks_run": 4,
+        "passed": 4,
+        "duration_sec": 19.2,
+        "issues": []
+      },
+      {
+        "tier": "network",
+        "status": "WARN",
+        "checks_run": 3,
+        "passed": 2,
+        "duration_sec": 7.8,
+        "issues": [
+          {
+            "severity": "warning",
+            "message": "DNS resolution latency elevated (125ms avg)",
+            "recommendation": "Check upstream DNS configuration"
+          }
+        ]
+      }
+    ]
+  }
+}
